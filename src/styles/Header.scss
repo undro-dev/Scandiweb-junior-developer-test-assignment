@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import './variables.scss';
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	height: 80px;
+	padding: 24px 101px 15px;
+
+	.header-logo {
+			width: 41px;
+			height: 41px;
+			background-image: url('../images/icons/logo.svg');
+		}
+}
+
+.header-nav  {
+	ul {
+		display: flex;
+		column-gap: 16px;
+		list-style-type: none;
+	}
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-family: 'Raleway', sans-serif;
+		color: black;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 120%;
+	}
+		a:after {
+			display: block;
+			content: "";
+			height: 2px;
+			width: 0%;
+			background-color: $green;
+			transition: width 0.4s ease-in-out;
+			margin-top: 30px;
+		}
+}
+ 
+.header-nav a:hover:after,
+.header-nav a:focus:after,
+.header-nav a:focus,
+.header-nav a:hover {
+	width: 100%;
+	color: $green;
+}
+
+
+
+.currencies-cart {
+	display: flex;
+	column-gap: 22px;
+
+	.header-cart {
+		position: relative;
+			cursor: pointer;
+			height: 20px;
+			width: 20px;
+			background-image: url('../images/icons/empty-Cart.svg');
+		}
+
+	.header-select {
+		height: max-content;
+		border: none;
+		cursor: pointer;
+	}
+}
+
+.cart-count {
+	position: absolute;
+	top: -8px;
+	right: -12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	border-radius: 100%;
+	background-color: $black;
+	color: white;
+	font-family: 'Roboto';
+	font-weight: 700;
+	font-size: 14px;
+}
+
+

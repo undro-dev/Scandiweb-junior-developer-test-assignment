@@ -1,0 +1,141 @@
+@import './variables';
+.main-container-product {
+	padding-top: 80px;
+}
+
+.product-wrapper {
+	display: flex;
+	column-gap: 100px;
+
+	.product-images {
+		display: flex;
+		column-gap: 40px;
+		// flex-grow: 1;
+	}
+	.product-form {
+		width: 292px;
+		h2 {
+			font-family: 'Raleway';
+			font-weight: 600;
+			font-size: 30px;
+			line-height: 27px;
+			margin-bottom: 16px;
+		}
+		h6 {
+			text-transform: uppercase;
+			font-family: 'Roboto Condensed';
+			font-weight: bold;
+			font-size: 18px;
+			line-height: 18px;
+			color: $black;
+			margin-bottom: 8px;
+		}
+		.product-id {
+			font-family: 'Raleway';
+			font-size: 30px;
+			line-height: 27px;
+			text-transform: capitalize;
+			margin-bottom: 43px;
+		}
+		.product-description {
+			font-family: 'Roboto';
+			font-size: 16px;
+			line-height: 159.96%;
+		}
+		span {
+			font-family: 'Raleway';
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 18px;
+			color: $black;
+		}
+	}
+}
+.product-images-small {
+	display: flex;
+	flex-direction: column;
+	row-gap: 40px;
+
+	.small-img {
+		display: block;
+		width: 79px;
+		height: 80px;
+		cursor: pointer;
+	}
+}
+.large-img {
+	display: block;
+	width: 610px;
+	height: 511px;
+}
+
+.color-attribute-wrapper {
+	display: flex;
+	column-gap: 8px;
+	margin-bottom: 24px;
+	.color-label {
+		display: block;
+		width: 36px;
+		height: 36px;
+		border: 1px solid $black;
+		cursor: pointer;
+	}
+
+	.color-field {
+		position: absolute;
+		visibility: hidden;
+	}
+}
+.attribute-wrapper {
+	display: flex;
+	column-gap: 12px;
+	margin-bottom: 24px;
+	.atr-label {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 63px;
+		height: 45px;
+		border: 1px solid $black;
+		font-family: 'Source Sans Pro';
+		font-size: 16px;
+		line-height: 18px;
+		color: $black;
+		cursor: pointer;
+	}
+
+	.atr-field {
+		position: absolute;
+		visibility: hidden;
+	}
+}
+
+.price-title {
+	margin-top: 36px;
+	margin-bottom: 10px;
+}
+.form-submit {
+	display: block;
+	width: 292px;
+	height: 52px;
+	border: none;
+	background-color: $green;
+	font-family: 'Raleway';
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+	text-transform: uppercase;
+	color: white;
+	margin-top: 36px;
+	margin-bottom: 40px;
+	cursor: pointer;
+}
+
+input.atr-field:checked + div{
+	background-color: $black;
+	color: white;
+}
+
+input.color-field:checked+div {
+	border: 1px solid $green;
+}

@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { Products } from './pages/Products.jsx';
+import { Header } from './components/header/Header.jsx';
+import { Route, Routes } from 'react-router-dom';
+import { Details } from './pages/Details.jsx';
+import { Modal } from './pages/Modal.jsx';
+import { Cart } from './pages/Cart.jsx';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<>
+			<Header />
+			<Routes>
+				<Route path='/' element={<Products />} />
+				<Route path='products/:category' element={<Products />} />
+				<Route path='products/:category' element={<Products />} />
+				<Route path='products/:category/:id' element={<Details />} />
+				<Route path='cart' element={<Cart />} />
+			</Routes>
+			<Modal />
+		</>
+	);
 }
 
 export default App;

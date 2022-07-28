@@ -1,0 +1,145 @@
+@import './variables';
+.cart-container {
+	padding: 80px auto;
+	.modal-item-cart {
+		border-top: 1px solid #E5E5E5;
+		padding-top: 24px;
+		padding-bottom: 24px;
+		column-gap: 24px;
+		.modal-item-cart__counter {
+			button {
+				width: 45px;
+				height: 45px;
+				font-size: 28px;
+			}
+			span {
+				font-size: 24px;
+				line-height: 160%;
+			}
+
+		}
+	}
+		
+	h1 {
+		font-family: 'Raleway';
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 40px;	
+		text-transform: uppercase;
+		color: $black;
+	}
+}
+
+.main-cart-description {
+	color: $black;
+	font-family: 'Raleway';
+	flex-grow: 1;
+
+	h6 {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 27px;
+		margin-bottom: 16px;
+	}
+	p {
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 27px;
+		margin-bottom: 20px;
+	}
+
+	span {
+		display: block;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 24px;
+		margin-bottom: 20px;
+	}
+	.atr-overlay {
+		p {
+			font-family: 'Roboto Condensed';
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 18px;
+			text-transform: uppercase;
+			margin-bottom: 0 !important;
+		}
+	}
+	.atr-overlay-wrapper {
+		.modal-atr-item {
+			width: 63px;
+			height: 45px;
+			font-size: 16px;
+			line-height: 18px;
+			letter-spacing: 0.05em;
+		}
+		.modal-color-atr {
+			width: 32px;
+			height: 32px;
+		}
+
+	}
+}
+
+.cart-image-wrapper {
+	width: 200px;
+	height: 288px;
+	position: relative;
+	img {
+		display: block;
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	.btn-controls {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		display: flex;
+		column-gap: 8px;
+		button {
+			width: 24px;
+			height: 24px;
+			background-color: rgba($color: $black, $alpha: 0.8);
+			color: white;
+			border: 1px solid $black;
+			background-repeat: no-repeat;
+			background-position: center;
+			cursor: pointer;
+		};
+		.prev {
+			background-image: url('../images/icons/prev-btn.svg');
+		}
+		.next {
+			background-image: url('../images/icons/next-btn.svg');
+		}
+	}
+}
+.cart-total {
+	font-family: 'Raleway';
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	color: $black;
+	margin-bottom: 16px;
+}
+.order-btn {
+	border: none;
+	background-color: white;
+	color: $black;
+	width: 279px;
+	height: 43px;
+	border: 1px solid black;
+	font-family: 'Raleway';
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 120%;
+	transition:all 0.4s;
+	cursor: pointer;
+	&:hover {
+		background-color: $green;
+		color: white;
+		border: none;
+	}
+
+}
